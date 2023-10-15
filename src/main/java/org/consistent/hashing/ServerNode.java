@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.Objects;
 
 @Getter
 @Setter
@@ -12,11 +15,17 @@ import lombok.Setter;
 public class ServerNode implements Node{
     private  String dataCenter;
     private  String ipAddress;
-    private  int portNumber;
+    private  Integer portNumber;
+
+    public ServerNode(String dataCenter){
+        this.dataCenter = dataCenter;
+    }
 
     @Override
     public String getKey() {
-        return dataCenter + "-" + ipAddress + ":" + portNumber;
+        return StringUtils.isNotEmpty(ipAddress) && !Objects.isNull(portNumber)   ?
+                dataCenter + "-" + ipAddress + ":" + portNumber :
+                dataCenter;
     }
 
     @Override

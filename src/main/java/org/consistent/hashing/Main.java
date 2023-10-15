@@ -23,7 +23,7 @@ public class Main {
         consistentHashing.route(ips);
 
         System.out.println("\nLet's add another server node: Denver");
-        ServerNode node5 = new ServerNode("Denver","127.0.0.5",8085);
+        ServerNode node5 = new ServerNode("Denver");
         consistentHashing.addNode(node5);
         consistentHashing.route(ips);
 
