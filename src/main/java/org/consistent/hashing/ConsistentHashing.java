@@ -11,7 +11,7 @@ import java.util.TreeMap;
 
 public class ConsistentHashing<T extends Node> {
 
-    private final static int VIRTUAL_NODE_COUNT = 20;
+    private final static int VIRTUAL_NODE_COUNT = 5;
     SortedMap<Long, VirtualNode<T>> ring = new TreeMap<>();
 
     public ConsistentHashing(Collection<T> collection){
