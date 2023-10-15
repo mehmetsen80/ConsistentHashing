@@ -7,13 +7,13 @@ import java.util.Arrays;
 public class Main {
 
     //NODES
-    private final static ServerNode node1 = new ServerNode("New York","127.0.0.1",8080);
-    private final static ServerNode node2 = new ServerNode("Houston","127.0.0.2",8081);
-    private final static ServerNode node3 = new ServerNode("Oregon","127.0.0.3",8082);
-    private final static ServerNode node4 = new ServerNode("Chicago","127.0.0.4",8084);
+    private static final ServerNode node1 = new ServerNode("New York","127.0.0.1",8080);
+    private static final ServerNode node2 = new ServerNode("Houston","127.0.0.2",8081);
+    private static final ServerNode node3 = new ServerNode("Oregon","127.0.0.3",8082);
+    private static final ServerNode node4 = new ServerNode("Chicago","127.0.0.4",8084);
 
     //DATA
-    private final static String[] ips = {"192.5.1.1", "172.8.1.2", "111.1.9.13", "122.0.5.6", "199.25.4.7", "133.6.5.2", "194.7.8.9"};
+    private static final String[] ips = {"192.5.1.1", "172.8.1.2", "111.1.9.13", "122.0.5.6", "199.25.4.7", "133.6.5.2", "194.7.8.9"};
 
 
     public static void main(String[] args) {
