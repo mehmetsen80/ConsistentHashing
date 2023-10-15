@@ -9,7 +9,16 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class VNode {
-    String key;
-    PhysicalNode physicalNode;
+public class VirtualNode<T extends Node> implements Node{
+    T serverNode;
+    Integer index;
+
+    @Override
+    public String getKey() {
+        return serverNode.getKey() + "-" + index;
+    }
+
+    public boolean isVirtualNodeOf(T node){
+        return serverNode.getKey().equals(node.getKey());
+    }
 }

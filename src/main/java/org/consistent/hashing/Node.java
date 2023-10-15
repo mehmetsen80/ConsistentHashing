@@ -1,2 +1,5 @@
-package org.consistent.hashing;public interface Node {
+package org.consistent.hashing;
+
+public interface Node {
+    String getKey();
 }

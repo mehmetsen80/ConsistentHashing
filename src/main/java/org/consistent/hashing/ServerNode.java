@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class PhysicalNode implements Node{
+public class ServerNode implements Node{
     private  String dataCenter;
     private  String ipAddress;
     private  int portNumber;
@@ -17,5 +17,10 @@ public class PhysicalNode implements Node{
     @Override
     public String getKey() {
         return dataCenter + "-" + ipAddress + ":" + portNumber;
+    }
+
+    @Override
+    public String toString(){
+        return getKey();
     }
 }
